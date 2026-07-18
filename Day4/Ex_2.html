@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA PRACTICE</title>
+</head>
+<body>
+    <h1>ARIA EXAMPLE</h1>
+
+    <!-- Navigation with ARIA -->
+    <nav role="navigation" aria-label="Main Navigation">
+        <ul>
+            <li><a href="#home" role="link">Home</a></li>
+            <li><a href="#about" role="link">About</a></li>
+            <li><a href="#services" role="link">Services</a></li>
+            <li><a href="#contact" role="link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Button with icon needs aria-label -->
+     <button aria-label="Close Menu">✕</button>
+
+     <!--Form with aria-describedby-->
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" aria-describedby="emailHelp">
+            <small id="emailHelp">We'll never share your email with anyone else.</small>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- Custom button needs role -->
+    <div role="button" tabindex="0">Custom Button</div>
+    <br><br>
+
+       <h1>Registration Form</h1>
+    
+    <form>
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+        
+        <!-- Live region for error messages -->
+        <div aria-live="polite" role="alert" id="usernameError"></div>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+        
+        <!-- Live region for error messages -->
+        <div aria-live="polite" role="alert" id="emailError"></div>
+        
+        <button type="submit">Register</button>
+    </form>
+    
+    <!-- Success message -->
+    <div aria-live="polite" role="status" id="successMessage"></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skip Nav Practice</title>
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            background: #0066cc;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 0 0 5px 5px;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <!-- 15 links -->
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#blog">Blog</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#careers">Careers</a>
+            <a href="#faq">FAQ</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#support">Support</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#sitemap">Sitemap</a>
+            <!-- Add 13 more links -->
+        </nav>
+    </header>
+    
+    <main id="main" tabindex="-1">
+        <h2>Main Content Starts Here</h2>
+        <p>You skipped the navigation!</p>
+    </main>
+</body>
+</html>

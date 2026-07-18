@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact us for web development services. We build accessible, modern, and responsive websites.">
+    <meta name="keywords" content="contact us, web development, website design, accessibility">
+    <meta name="author" content="AleemTech-Wala">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook/Instagram/LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://AleemTech-Wala.com/contact">
+    <meta property="og:title" content="Contact Us - AleemTech-Wala">
+    <meta property="og:description" content="Get in touch with us for your next web development project. We specialize in accessible and modern websites.">
+    <meta property="og:image" content="https://AleemTech-Wala.com/images/contact-preview.jpg">
+    <meta property="og:site_name" content="AleemTech-Wala">
+
+     <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://AleemTech-Wala.com/contact">
+    <meta name="twitter:title" content="Contact Us - AleemTech-Wala">
+    <meta name="twitter:description" content="Get in touch with us for your next web development project.">
+    <meta name="twitter:image" content="https://AleemTech-Wala.com/images/contact-preview.jpg">
+
+    <title>Contact Us - AleemTech-Wala | Get Free Quote</title>
+
+    <style>
+        /* Skip Link Styles */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #0066cc;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 0 0 5px 0;
+            z-index: 100;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Focus visible styles */
+        *:focus {
+            outline: 3px solid #0066cc;
+            outline-offset: 2px;
+        }
+        
+        /* Error message styles */
+        .error-message {
+            color: #d32f2f;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        /* Success message styles */
+        .success-message {
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        /* Required field indicator */
+        .required {
+            color: #d32f2f;
+        }
+        
+        /* Form layout */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        form {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            border-color: #0066cc;
+        }
+        
+        button {
+            background: #0066cc;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        button:hover {
+            background: #0052a3;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        /* Breadcrumb styles */
+        nav[aria-label="Breadcrumb"] ol {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        nav[aria-label="Breadcrumb"] li:not(:last-child)::after {
+            content: ">";
+            margin-left: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Skip to Main Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>   
+    
+    <!-- Header -->
+    <header>
+        <h1>AleemTech-Wala (WebDev Services)</h1>
+        
+        <!-- Main Navigation -->
+        <nav aria-label="Main navigation">
+            <a href="/">Home</a> |
+            <a href="/services">Services</a> |
+            <a href="/portfolio">Portfolio</a> |
+            <a href="/about">About</a> |
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="/">
+                    <span itemprop="name">Home</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <span itemprop="name">Contact</span>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" tabindex="-1">
+        <h2>Contact Us</h2>
+        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+        
+        <!-- Success Message (hidden by default) -->
+        <div class="success-message" role="status" aria-live="polite" id="successMessage">
+            Thank you! Your message has been sent successfully. We'll contact you soon.
+        </div>
+        
+        <!-- Contact Form -->
+        <form id="contactForm" novalidate>
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullName">
+                    Full Name <span class="required" aria-label="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="fullName" 
+                    name="fullName"
+                    aria-required="true"
+                    aria-describedby="nameHelp nameError"
+                    required
+                >
+                <small id="nameHelp">Enter your first and last name</small>
+                <div class="error-message" role="alert" aria-live="polite" id="nameError"></div>
+            </div>
+            
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">
+                    Email Address <span class="required" aria-label="required">*</span>
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email"
+                    aria-required="true"
+                    aria-describedby="emailHelp emailError"
+                    required
+                >
+                <small id="emailHelp">We'll never share your email with anyone</small>
+                <div class="error-message" role="alert" aria-live="polite" id="emailError"></div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">
+                    Phone Number <span class="required" aria-label="required">*</span>
+                </label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone"
+                    pattern="[0-9]{10}"
+                    aria-required="true"
+                    aria-describedby="phoneHelp phoneError"
+                    placeholder="1234567890"
+                    required>
+                <small id="phoneHelp">10-digit phone number without spaces or dashes</small>
+                <div class="error-message" role="alert" aria-live="polite" id="phoneError"></div>
+            </div>
+            
+            <!-- Subject -->
+            <div class="form-group">
+                <label for="subject">
+                    Subject <span class="required" aria-label="required">*</span>
+                </label>
+                <select 
+                    id="subject" 
+                    name="subject"
+                    aria-required="true"
+                    aria-describedby="subjectError"
+                    required
+                >
+                    <option value="">-- Please Select --</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="quote">Request Quote</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+                <div class="error-message" role="alert" aria-live="polite" id="subjectError"></div>
+            </div>
+            
+            <!-- Message -->
+            <div class="form-group">
+                <label for="message">
+                    Message <span class="required" aria-label="required">*</span>
+                </label>
+                <textarea 
+                    id="message" 
+                    name="message"
+                    rows="6"
+                    maxlength="500"
+                    aria-required="true"
+                    aria-describedby="messageHelp messageError"
+                    required
+                ></textarea>
+                <small id="messageHelp">Maximum 500 characters</small>
+                <div class="error-message" role="alert" aria-live="polite" id="messageError"></div>
+            </div>
+            
+            <!-- Newsletter Subscription -->
+            <div class="form-group">
+                <input 
+                    type="checkbox" 
+                    id="newsletter" 
+                    name="newsletter"
+                    style="width: auto; display: inline-block;"
+                >
+                <label for="newsletter" style="display: inline; font-weight: normal;">
+                    Subscribe to our newsletter
+                </label>
+            </div>
+            
+            <!-- Terms and Conditions -->
+            <div class="form-group">
+                <input 
+                    type="checkbox" 
+                    id="terms" 
+                    name="terms"
+                    aria-required="true"
+                    aria-describedby="termsError"
+                    required
+                    style="width: auto; display: inline-block;"
+                >
+                <label for="terms" style="display: inline; font-weight: normal;">
+                    I agree to the <a href="/terms">Terms and Conditions</a> <span class="required">*</span>
+                </label>
+                <div class="error-message" role="alert" aria-live="polite" id="termsError"></div>
+            </div>
+            
+            <!-- Submit Button -->
+            <button 
+                type="submit"
+                aria-label="Submit contact form">
+                Send Message
+            </button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AleemTech-Wala. All rights reserved.</p>
+        <nav aria-label="Footer navigation">
+            <a href="/privacy">Privacy Policy</a> |
+            <a href="/terms">Terms of Service</a> |
+            <a href="/accessibility">Accessibility Statement</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
