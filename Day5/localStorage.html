@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Saver</title>
+</head>
+<body>
+    <h2>Apna Favorite Color Save Karo</h2>
+    <input type="color" id="colorPicker">
+    <button onclick="saveColor()">Save Color</button>
+    <button onclick="showColor()">Show Saved Color</button>
+    <div id="display"></div>
+    
+    <script>
+        function saveColor() {
+            let color = document.getElementById('colorPicker').value;
+            localStorage.setItem('favoriteColor', color);
+            alert('Color saved! ✅');
+        }
+        
+        function showColor() {
+            let savedColor = localStorage.getItem('favoriteColor');
+            if(savedColor) {
+                document.getElementById('display').style.backgroundColor = savedColor;
+                document.getElementById('display').innerHTML = 'Tumhara favorite color: ' + savedColor;
+                document.getElementById('display').style.padding = '20px';
+            } else {
+                alert('Pehle color save karo!');
+            }
+        }
+    </script>
+</body>
+</html>
