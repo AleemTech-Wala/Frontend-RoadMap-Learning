@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website of AleemTech-Wala
+     Full Stack Web Developer specializing in HTML, CSS, JavaScript, 
+     and .NET technologies">
+     <meta name="keywords" content="Portfolio, AleemTech-Wala, Full Stack
+      Developer, Web Development, HTML, CSS, JavaScript, .NET">
+     <meta name="author" content="AleemTech-Wala">
+    <title>Contact - AleemTech-Wala Portfolio</title>
+</head>
+<body>
+    <!--Skip to Main content Link (Accessibility)-->
+    <a href="#main-content" class="skip-link" style="position: absolute; 
+    left: -9999px;">Skip to Main Content</a>
+
+    
+         <!--Header Section-->
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <h2 style="display: inline-block;" >AleemTech-Wala 
+                 .NET Full Stack Web Developer</h2>
+            <ul style="list-style: none; display: inline">
+                <li style="display: inline; margin: 0 15px;">
+                    <a href="index.html" aria-current="page">Home</a>
+                </li>
+                <li style="display: inline; margin: 0 15px;">
+                    <a href="about.html">About</a>
+                </li>
+                <li style="display: inline; margin: 0 15px;">
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li style="display: inline; margin: 0 15px;">
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li style="display: inline; margin: 0 15px;">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav aria-label="Breadcrumb">
+        <ol style="list-style: none; padding: 0;">
+            <li style="display: inline;"><a href="index.html">Home</a> &gt;</li>
+            <li style="display: inline;" aria-current="page">Contact</li>
+        </ol>
+    </nav>
+
+        <main id="main-content" role="main">
+        <header>
+            <h1>Get In Touch</h1>
+            <p>Have a project in mind? Let's talk about it!</p>
+        </header>
+        
+        <hr>
+        
+        <!-- Contact Information -->
+        <section aria-labelledby="contact-info-heading">
+            <h2 id="contact-info-heading">Contact Information</h2>
+            
+            <address>
+                <p>
+                    <strong>Email:</strong> 
+                    <a href="mailto:rajaaleem083@gmail.com" aria-label="Send email to rajaaleem083@gmail.com">
+                        rajaaleem083@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <strong>Phone:</strong> 
+                    <a href="tel:+1234567890" aria-label="Call +1 234 567 890">
+                        +1 (234) 567-890
+                    </a>
+                </p>
+                <p>
+                    <strong>Location:</strong> 
+                    Wah Cantt, Pakistan
+                </p>
+            </address>
+            
+            <p><strong>Social Media:</strong></p>
+            <ul>
+                <li>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
+                        Twitter
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+        <hr>
+
+        <!-- Contact Form -->
+         <section aria-labelledby="Contact-form-heading">
+            <h2 id="Contact-form-heading">Send Me a Message</h2>
+
+            <form action="#" method="POST" aria-labelledby="contact-form-heading">
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <p>
+                        <label for="fullName">
+                            Full Name <abbr title="Required" aria-label="Required">*</abbr>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            required 
+                            minlength="3"
+                            maxlength="50"
+                            aria-required="true"
+                            placeholder="Enter your full name">
+                    </p>
+                    
+                    <p>
+                        <label for="email">
+                            Email Address <abbr title="Required" aria-label="Required">*</abbr>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            aria-required="true"
+                            placeholder="your.email@example.com">
+                    </p>
+                    
+                    <p>
+                        <label for="phone">
+                            Phone Number
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone"
+                            pattern="[0-9]{10,15}"
+                            placeholder="+1234567890"
+                            aria-describedby="phone-help">
+                        <small id="phone-help">Format: 10-15 digits</small>
+                    </p>
+                    
+                    <p>
+                        <label for="company">
+                            Company/Organization
+                        </label>
+                        <input 
+                            type="text" 
+                            id="company" 
+                            name="company"
+                            placeholder="Your company name (optional)">
+                    </p>
+                </fieldset>
+        
+
+                <!-- Project Details -->
+                <fieldset>
+                    <legend>Project Details</legend>
+                    
+                    <p>
+                        <label for="subject">
+                            Subject <abbr title="Required" aria-label="Required">*</abbr>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            required
+                            aria-required="true"
+                            placeholder="What is this about?">
+                    </p>
+                    
+                    <p>
+                        <label for="projectType">
+                            Project Type <abbr title="Required" aria-label="Required">*</abbr>
+                        </label>
+                        <select id="projectType" name="projectType" required aria-required="true">
+                            <option value="">-- Select Project Type --</option>
+                            <option value="website">Website Development</option>
+                            <option value="webapp">Web Application</option>
+                            <option value="ecommerce">E-Commerce Platform</option>
+                            <option value="api">API Development</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="budget">
+                            Budget Range
+                        </label>
+                        <select id="budget" name="budget">
+                            <option value="">-- Select Budget Range --</option>
+                            <option value="small">$1,000 - $5,000</option>
+                            <option value="medium">$5,000 - $10,000</option>
+                            <option value="large">$10,000 - $25,000</option>
+                            <option value="enterprise">$25,000+</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="timeline">
+                            Expected Timeline
+                        </label>
+                        <select id="timeline" name="timeline">
+                            <option value="">-- Select Timeline --</option>
+                            <option value="urgent">ASAP (Within 2 weeks)</option>
+                            <option value="short">1-2 months</option>
+                            <option value="medium">2-4 months</option>
+                            <option value="long">4+ months</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="message">
+                            Project Description <abbr title="Required" aria-label="Required">*</abbr>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="8" 
+                            required
+                            minlength="20"
+                            maxlength="1000"
+                            aria-required="true"
+                            placeholder="Tell me about your project... (20-1000 characters)"></textarea>
+                        <small>Characters: 0/1000</small>
+                    </p>
+                </fieldset>
+
+                <!-- Additional Information -->
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <p>
+                        <label for="website">
+                            Your Website/Portfolio (if any)
+                        </label>
+                        <input 
+                            type="url" 
+                            id="website" 
+                            name="website"
+                            placeholder="https://example.com">
+                    </p>
+                    
+                    <p>
+                        <label for="referral">
+                            How did you hear about me?
+                        </label>
+                        <select id="referral" name="referral">
+                            <option value="">-- Select One --</option>
+                            <option value="google">Google Search</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="github">GitHub</option>
+                            <option value="referral">Friend/Colleague Referral</option>
+                            <option value="portfolio">Your Portfolio</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <span>Preferred Contact Method:</span><br>
+                        
+                        <input 
+                            type="radio" 
+                            id="contactEmail" 
+                            name="contactMethod" 
+                            value="email"
+                            checked>
+                        <label for="contactEmail">Email</label><br>
+                        
+                        <input 
+                            type="radio" 
+                            id="contactPhone" 
+                            name="contactMethod" 
+                            value="phone">
+                        <label for="contactPhone">Phone</label><br>
+                        
+                        <input 
+                            type="radio" 
+                            id="contactBoth" 
+                            name="contactMethod" 
+                            value="both">
+                        <label for="contactBoth">Either is fine</label>
+                    </p>
+                    
+                    <p>
+                        <label for="availability">
+                            When can I reach you? (Optional)
+                        </label>
+                        <input 
+                            type="datetime-local" 
+                            id="availability" 
+                            name="availability">
+                    </p>
+                    
+                    <p>
+                        <input 
+                            type="checkbox" 
+                            id="newsletter" 
+                            name="newsletter"
+                            value="yes">
+                        <label for="newsletter">
+                            Subscribe to my newsletter for web development tips
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <input 
+                            type="checkbox" 
+                            id="terms" 
+                            name="terms"
+                            required
+                            aria-required="true">
+                        <label for="terms">
+                            I agree to the <a href="#" target="_blank">terms and conditions</a> 
+                            <abbr title="Required" aria-label="Required">*</abbr>
+                        </label>
+                    </p>
+                </fieldset>
+                
+                <!-- Submit Button -->
+                <p>
+                    <button type="submit">Send Message 📧</button>
+                    <button type="reset">Clear Form 🔄</button>
+                </p>
+                
+                <p>
+                    <small>
+                        <abbr title="Required" aria-label="Required">*</abbr> = Required field
+                    </small>
+                </p>
+
+            </form>
+         </section>
+
+         <hr>
+        
+        <!-- Map Section -->
+        <section aria-labelledby="location-heading">
+            <h2 id="location-heading">Find Me On The Map</h2>
+            <figure>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093697!2d144.95373531531686!3d-37.81720997975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sau!4v1635821453833!5m2!1sen!2sau"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="Office location map">
+                </iframe>
+                <figcaption>My office location (for in-person meetings)</figcaption>
+            </figure>
+        </section>
+        
+    </main>
+    
+    <footer role="contentinfo">
+        <hr>
+        <p><small>&copy; <time datetime="2024">2024</time> Your Name. All rights reserved.</small></p>
+        <nav aria-label="Social Media Links">
+            <ul style="list-style: none;">
+                <li style="display: inline; margin: 0 10px;">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </li>
+                <li style="display: inline; margin: 0 10px;">
+                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </li>
+                <li style="display: inline; margin: 0 10px;">
+                    <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
