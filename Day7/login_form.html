@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Login | Accessible Form</title>
+</head>
+<body>
+    <header>
+        <h1>🔐 Secure Login</h1>
+    </header>
+
+    <main>
+        <form action="#" method="POST"
+        aria-label="Login Form">
+
+        <section>
+            <h2>Sign in to your account</h2>
+
+            <!-- Email Field -->
+             <div>
+                <label for="login-email">
+                    Email Address :
+                    <abbr title="required">*</abbr>
+                </label>
+                <input type="email"
+                id="login-email"
+                name="email"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="email-error"
+                placeholder="your.email@example.com">
+                <span id="email-error" role="alert"
+                aria-live="polite"></span>
+             </div>
+
+            <!-- Password Field -->
+             <div>
+                    <label for="login-password">
+                        Password:
+                        <abbr title="required" aria-label="required">*</abbr>
+                    </label>
+                    <input 
+                        type="password" 
+                        id="login-password" 
+                        name="password" 
+                        required
+                        autocomplete="current-password"
+                        aria-required="true"
+                        aria-describedby="password-help password-strength"
+                        minlength="8"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                        placeholder="Enter your password">
+                    <small id="password-help">
+                        Must be 8+ characters with uppercase, lowercase, number, and special character
+                    </small>
+                    <div id="password-strength" role="status" aria-live="polite">
+                        <p>Password Strength: <span id="strength-text">None</span></p>
+                        <meter 
+                            id="strength-meter" 
+                            value="0" 
+                            min="0" 
+                            max="100" 
+                            low="33" 
+                            high="66" 
+                            optimum="90"
+                            aria-label="Password strength indicator">
+                            0%
+                        </meter>
+                    </div>
+                </div>
+
+                <!-- Show Password toggle -->
+                 <div>
+                    <label>
+                        <input
+                        type="checkbox"
+                        id="show-password"
+                        aria-label="Show Password">
+                        Show Password
+                    </label>
+                 </div>
+
+                 <!-- Remember Me -->
+                  <div>
+                    <label>
+                        <input
+                        type="checkbox"
+                        name="remember"
+                        id="remember-me">
+                        Remember me for 30 days
+                    </label>
+                  </div>
+
+                <!-- Submit Button -->
+                    <div>
+                        <button type="submit"
+                        aria-label="Sign in to your account">
+                            Sign In
+                        </button>
+                    </div>
+
+                    <!-- Additional Links -->
+                     <nav aria-label="Login options">
+                        <ul>
+                            <li><a href="#forgot-password">
+                                Forgot Password?</a></li>
+                            <li><a href="#create-account">
+                                Create an Account</a></li>
+                        </ul>
+                     </nav>
+        </section>
+
+        <!-- Alternative Login Methods -->
+         <section>
+            <h2>Or sign in with</h2>
+            <nav aria-label="Social Login options">
+                <ul>
+                    <li><a href="google-login" aria-label="Sign in with google">
+                    🔵 Continue with Google</a></li>
+                    <li><a href="#facebook-login" aria-label="Sign in with Facebook">
+                    🔷 Continue with Facebook</a></li>
+
+                    <li><a href="#github-login" aria-label="Sign-in with GitHub">
+                    ⚫ Continue with GitHub
+                    </a></li>
+                </ul>
+            </nav>
+         </section>
+    </form>
+    </main>
+    <script>
+        // Password Strength Checker
+        const passwordInput = document.getElementById('login-password');
+        const strengthMeter = document.getElementById('strength-meter');
+        const strengthText = document.getElementById('strength-text');
+
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            let strength = 0;
+
+            // Length check
+            if (password.length >= 8) strength += 25;
+            if (password.length >= 12) strength += 10;
+
+            // Character variety checks
+            if (/[a-z]/.test(password)) strength += 15; // lowercase
+            if (/[A-Z]/.test(password)) strength += 15; // uppercase
+            if (/\d/.test(password)) strength += 15; // numbers
+            if (/[@$!%*?&]/.test(password)) strength += 20; // special chars
+
+            // Update meter
+            strengthMeter.value = strength;
+
+            // Update text
+            if (strength < 33) {
+                strengthText.textContent = 'Weak';
+                strengthText.style.color = 'red';
+            } else if (strength < 66) {
+                strengthText.textContent = 'Medium';
+                strengthText.style.color = 'orange';
+            } else {
+                strengthText.textContent = 'Strong';
+                strengthText.style.color = 'green';
+            }
+        });
+
+        // Show/Hide Password Toggle
+        const showPasswordCheckbox = document.getElementById('show-password');
+        showPasswordCheckbox.addEventListener('change', function() {
+            passwordInput.type = this.checked ? 'text' : 'password';
+        });
+    </script>
+</body>
+</html>

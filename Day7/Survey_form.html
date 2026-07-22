@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <meta name="description" content="Web Developer Community
+     Survey 2024 - Share your experience and skills">
+    <meta name="keywords" content="developer survey, programming 
+    survey, web development, coding questionnaire">
+    <title>Developer Survey 2024 | HTML Forms Masterclass</title>
+</head>
+<body>
+    <header>
+        <h1>🚀 Web Developer Community Survey 2024</h1>
+        <p><em>Help us understand the developer community better!</em></p>
+        <p><mark>Estimated Time: 5-7 minutes</mark></p>
+    </header>
+
+    <main>
+        <form action="#" method="POST" 
+        aria-label="Developer comunity survey form">
+
+        <!--Section 1: Personal Information-->
+        
+        <section>
+            <h2>📋 Section 1: Personal Information</h2>
+            
+            <!-- Question 1: Full Name -->
+            <div>
+                <label for="fullname">1.Full Name: <abbr 
+                title="required" aria-label="required">*</abbr></label>
+                <input type="text" id="fullname" name="fullname"
+                placeholder="e.g, Ahmed Khan" required minlength="3"
+                maxlength="50" aria-required="true">
+            </div>
+            <br>
+
+            <!-- Question 2: Email -->
+            <div>
+                <label for="email">2.Email:<abbr title= "required"
+                aria-label="required">*</abbr></label>
+                <input type="email" id="email" name="email"
+                placeholder="your.email@example.com" required
+                aria-required="true" aria-describedby="email-help">
+                <small id="email-help">We'll never share your email with anyone else.</small>
+            </div>
+            <br>
+
+            <!-- Question 3: Age Group -->
+            <fieldset>
+                <legend>
+                    3.Age Group: <abbr title="required"
+                    aria-label="required">*</abbr>
+                </legend>
+                <label>
+                    <input type="radio" name="age-group"
+                    value="under-18" required>under-18
+                </label>
+                <label>
+                    <input type="radio" name="age-group"
+                    value="18-24" >18-24
+                </label>
+                <label>
+                    <input type="radio" name="age-group"
+                    value="25-34" >25-34
+                </label>
+                <label>
+                    <input type="radio" name="age-group"
+                    value="35-44" >35-44
+                </label>
+                <label>
+                    <input type="radio" name="age-group"
+                    value="45-54" >45+
+                </label>
+            </fieldset>
+            <br>
+
+            <!-- Question 4: Country -->
+             <div>
+                <label for="country">4.Country:
+                    <abbr title="required" aria-label="required"
+                    >*</abbr>
+                </label>
+                <select id="country" name="country" required
+                aria-required="true">
+            
+            <option value="" >--Select your country--</option>
+            <option value="Pakistan" >Pakistan</option>
+            <option value="India" >India</option>
+            <option value="USA" >USA</option>
+            <option value="UK" >UK</option>
+            <option value="Canada" >Canada</option>
+            <option value="Australia" >Australia</option>
+            <option value="others">others</option>
+            </select>
+            </div>
+            
+        </section>
+
+        <!--Section 2: Professional Background-->
+        <section>
+        <h2>💼 Section 2: Professional Background</h2>
+
+        <!-- Question 5: Current Role -->
+         <div>
+            <label for="Role">5.Current Role:
+                <abbr title="required" aria-label="required"
+                >*</abbr>
+            </label>
+            <select id="Role" name="Role" required aria-required="true">
+                <option value="" >--Select your role--</option>
+                <option value="student" >Student</option>
+                <option value="junior-dev" >Junior Developer</option>
+                <option value="mid-dev" >Mid-Level Developer</option>
+                <option value="senior-dev" >Senior Developer</option>
+                <option value="manager" >Manager</option>
+                <option value="freelancer" >Freelancer</option>
+                <option value="other" >Other</option>
+            </select>
+         </div>
+         <br>
+
+         <!--Question 6: Year of Experience-->
+         <div>
+            <label for="experience">6. Years of Professional Experience:
+            <strong><span id="exp-value">5</span> years</strong>
+            </label>
+            <input 
+            type="range" 
+            id="experience"
+            name="experience" 
+            min="0" 
+            max="20" 
+            value="5"
+            step="1"
+            oninput="document.getElementById('exp-value').textContent = this.value"
+            aria-valuemin="0"
+            aria-valuemax="20"
+            aria-valuenow="5">
+            <small>0 years (Beginners) to 20+ years (expert)</small>
+         </div>
+         <br>
+
+         <!--Question 7: Company size-->
+         <fieldset>
+            <legend>
+                7. Current Company Size:
+            </legend>
+
+            <label>
+                <input type="radio" 
+                name="company-size" value="Self Employed"
+                >Self-Employed / Freelancer
+            </label>
+
+            <label>
+                <input type="radio"
+                name="company-size" value="1-10 Employees"
+                >1-10 Employees (Startup)
+            </label>
+
+            <label>
+                <input type="radio"
+                name="company-size" value="11-50 Employees"
+                >11-50 Employees (Small)
+            </label>
+
+            <label>
+                <input type="radio"
+                name="company-size" value="51-200 Employees"
+                >51-200 Employees (Medium)
+            </label>
+
+            <label>
+                <input type="radio"
+                name="company-size" value="201-1000 Employees"
+                >201-1000 Employees (Large)
+            </label>
+
+            <label>
+                <input type="radio"
+                name="company-size" value="1000+ Employees"
+                >1000+ Employees (Enterprise)
+            </label>
+         </fieldset>
+         <br>
+
+         <!--Question 8: Work Setup-->
+         <fieldset>
+            <legend>8. Current Work Setup:</legend>
+
+            <label>
+                <input type="radio"
+                name="work-setup" value="Remote"
+                >Fully Remote
+            </label>
+
+            <label>
+                <input type="radio"
+                name="work-setup" value="Office"
+                >Fully Office-Based
+            </label>
+
+            <label>
+                <input type="radio"
+                name="work-setup" value="Hybrid"
+                >Hybrid (Remote + Office)
+            </label>
+
+            <label>
+                <input type="radio"
+                name="work-setup" value="not-working"
+                >Not Currently Working
+            </label>
+         </fieldset>
+        </section>
+
+        <!--Section 3: Technical Skills-->
+        <section>
+            <h2>🛠️ Section 3: Technical Skills</h2>
+            
+            <!--Question 9: Programming Languages Known-->
+            <fieldset>
+                <legend>
+                    9.Which programming languages do you know?
+                    <abbr title="required" aria-label="required">*</abbr>
+                    <br>
+                    <small>(Select all that apply)</small>
+                </legend>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="Javascript" required>JavaScript
+                </label>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="Python" >Python
+                </label>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="Java" >Java
+                </label>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="Csharp" >C#
+                </label>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="PHP" >PHP
+                </label>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="Ruby" >Ruby
+                </label>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="C++" >C++
+                </label>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="TypeScript" >TypeScript
+                </label>
+
+                <label>
+                    <input type="checkbox" name="languages"
+                    value="Go" >Go
+                </label>
+            </fieldset>
+
+            <!--Question 10: Frontend Frameworks Known-->
+            <fieldset>
+                <legend>
+                    10. Which frontend framework/libraries 
+                    have you used?
+                </legend>
+
+                <label>
+                    <input type="checkbox" name="frontend-frameworks"
+                    value="ReactJS" >ReactJS
+                </label>
+
+                <label>
+                    <input type="checkbox" name="frontend-frameworks"
+                    value="Angular" >Angular
+                </label>
+
+                <label>
+                    <input type="checkbox" name="frontend-frameworks"
+                    value="VueJS" >VueJS
+                </label>
+
+                <label>
+                    <input type="checkbox" name="frontend-frameworks"
+                    value="Svelte" >Svelte
+                </label>
+
+                <label>
+                    <input type="checkbox" name="frontend-frameworks"
+                    value="nextjs" >Next.js
+                </label>
+
+                <label>
+                    <input type="checkbox" name="frontend-frameworks"
+                    value="others" >Others
+                </label>
+            </fieldset>
+
+            <!--Question 11: Backend Technologies-->
+            <fieldset>
+                <legend>
+                    11. Which backend technologies have you worked with?
+                </legend>
+
+                <label>
+                    <input type="checkbox" name="backend"
+                    value="NodeJS" >Node.js
+                </label>
+
+                <label>
+                    <input type="checkbox" name="backend"
+                    value="Django" >Django
+                </label>
+
+                <label>
+                    <input type="checkbox" name="backend"
+                    value="Flask" >Flask
+                </label>
+
+                <label>
+                    <input type="checkbox" name="dotnet"
+                    value="Laravel" >.NET Core
+                </label>
+
+                <label>
+                    <input type="checkbox" name="backend"
+                    value="Spring" >Spring Boot
+                </label>
+
+                <label>
+                    <input type="checkbox" name="backend"
+                    value="others" >Others
+                </label>
+            </fieldset>
+
+            <!--Question 12: Database-->
+            <fieldset>
+                <legend>
+                    12. Which databases are you familiar with?
+                </legend>
+
+                <label>
+                    <input type="checkbox" name="databases"
+                    value="MySQL" >MySQL
+                </label>
+
+                <label>
+                    <input type="checkbox" name="databases"
+                    value="PostgreSQL" >PostgreSQL
+                </label>
+
+                <label>
+                    <input type="checkbox" name="databases"
+                    value="MongoDB" >MongoDB
+                </label>
+
+                <label>
+                    <input type="checkbox" name="databases"
+                    value="SQLite" >SQLite
+                </label>
+
+                <label>
+                    <input type="checkbox" name="databases"
+                    value="Redis" >Redis
+                </label>
+
+                <label>
+                    <input type="checkbox" name="databases"
+                    value="others" >Others
+                </label>
+            </fieldset>
+
+            <!--Question 13: Skill Level Rating -->
+            <div>
+                <label for="html-skill">
+                    13a. Rate your HTML skill level:
+                    <strong>
+                        <span id="html-value">5</span>/10
+                    </strong>
+                </label>
+                <input
+                    type="range" 
+                    id="html-skill" 
+                    name="html-skill" 
+                    min="1" 
+                    max="10" 
+                    value="5" 
+                    step="1"
+                    oninput="document.getElementById('html-value').textContent = this.value">
+            </div>
+
+            <div>
+                <label for="css-skill">
+                    13b. Rate your CSS skill level:
+                    <strong>
+                        <span id="css-value">5</span>/10
+                    </strong>
+                </label>
+                <input
+                    type="range"
+                    id="css-skill"
+                    name="css-skill"
+                    min="1"
+                    max="10"
+                    value="5"
+                    step="1"
+                    oninput="document.getElementById('css-value').textContent = this.value">
+            </div>
+
+            <div>
+                <label for="js-skill">
+                    13c. Rate your JavaScript skill level:
+                    <strong>
+                        <span id="js-value">5</span>/10
+                    </strong>
+                </label>
+                <input
+                    type="range"
+                    id="js-skill"
+                    name="js-skill"
+                    min="1"
+                    max="10"
+                    value="5"
+                    step="1"
+                    oninput="document.getElementById('js-value').textContent = this.value">
+            </div>
+        </section>
+
+        <!--Section 4: Learning a Development-->
+        <section>
+            <h2>📚 Section 4: Learning & Development</h2>
+            
+            <!-- Question 14: Coding Frequency -->
+
+            <fieldset>
+                <legend>14. How often do you code?</legend>
+                <label>
+                    <input type="radio" name="coding-frequency"
+                    value="daily" required>Daily
+                </label>
+
+                <label>
+                    <input type="radio" name="coding-frequency"
+                    value="several-times-week" >Several times a week
+                </label>
+
+                <label>
+                    <input type="radio" name="coding-frequency"
+                    value="weekly" >Once a week
+                </label>
+
+                <label>
+                    <input type="radio" name="coding-frequency"
+                    value="monthly" >Once a month
+                </label>
+
+                <label>
+                    <input type="radio" name="coding-frequency"
+                    value="rarely" >Rarely
+                </label>
+            </fieldset>
+
+            <!-- Question 15: Learning Resources -->
+
+            <fieldset>
+                <legend>
+                    15. Which learning resources do you use? 
+                    (Select all that apply)
+                </legend>
+
+                <label>
+                    <input type="checkbox" name="resources"
+                    value="youtube">YouTube Tutorials
+                </label>
+
+                <label>
+                    <input type="checkbox" name="resources"
+                    value="Udemy">Udemy
+                </label>
+
+                <label>
+                    <input type="checkbox" name="resources"
+                    value="freecodecamp">freeCodeCamp
+                </label>
+
+                <label>
+                    <input type="checkbox" name="resources"
+                    value="coursera">Coursera
+                </label>
+
+                <label>
+                    <input type="checkbox" name="resources"
+                    value="books">Books
+                </label>
+
+                <label>
+                    <input type="checkbox" name="resources"
+                    value="documentation">Official Documentation
+                </label>
+
+                <label>
+                    <input type="checkbox" name="resources"
+                    value="university">College/University
+                </label>
+            </fieldset>
+
+            <!-- Question 16: Hours Per Week -->
+
+            <div>
+                <label for="hours-week">
+                    16. How many hours per week
+                    do you dedicate to learning/coding?
+                </label>
+                <input type="number" 
+                id="hours-week"
+                name="hours-week"
+                min="0"
+                max="168"
+                step="1"
+                placeholder="e.g 20">
+                <small>Enter the number between
+                    0 to 168 hours
+                </small>
+            </div>
+
+            <!-- Question 17: Preffered Learning style -->
+
+            <fieldset>
+                <legend>
+                    17. What is your preferred learning style?
+                </legend>
+
+                <label>
+                    <input type="radio" name="learning-style"
+                    value="video-tutorials" required>Video Tutorials
+                </label>
+
+                <label>
+                    <input type="radio" name="learning-style"
+                    value="reading">Reading Documentation
+                </label>
+
+                <label>
+                    <input type="radio" name="learning-style"
+                    value="interactive-coding">Interactive Coding
+                </label>
+
+                <label>
+                    <input type="radio" name="learning-style"
+                    value="hands-on">Hands-on Projects
+                </label>
+
+                <label>
+                        <input type="radio" name="learning-style"
+                        value="mentorship">Mentorship/Pair Learning
+                </label>
+            </fieldset>
+        </section>
+
+        <!-- Section 5: Goals & Feedback -->
+
+        <section>
+            <h2>🎯 Section 5: Goals & Feedback</h2>
+
+            <!-- Question 18 Career Goals -->
+
+            <div>
+                <label for="goals">
+                    18. What are your career goals for next year?
+                    <abbr title="required" aria-label="required">*</abbr>
+                </label>
+                <textarea id="goals" 
+                name="goals" 
+                rows="4" 
+                cols="50"
+                placeholder="Share your career aspirations, technologies you want to learn, or positions you're aiming for..."
+                required
+                minlength="20"
+                maxlength="500"
+                aria-required="true"
+                ></textarea>
+                <small><span id="goals-count">0</span>/500 characters</small>
+            </div>
+
+            <!-- Question 19: Biggest Challenges -->
+            <div>
+                <label for="challenge">
+                    19. What are the biggest challenges you face as a developer?
+                </label>
+                <textarea id="challenge" 
+                name="challenge" 
+                rows="4" 
+                cols="50"
+                placeholder="Describe the main obstacles you encounter in your development journey..."
+                minlength="20"
+                maxlength="500"
+                ></textarea>
+                <small><span id="challenge-count">0</span>/500 characters</small>
+            </div>
+
+            <!-- Question 20: Newsletter Subcription-->
+             <fieldset>
+                <legend>
+                    20. Would you like to subscribe to our monthly
+                    developer newsletter?
+                </legend>
+
+                <label>
+                    <input type="radio" name="newsletter"
+                    value="yes" required>Yes, sign me up!
+                </label>
+
+                <label>
+                    <input type="radio" name="newsletter"
+                    value="no" >No, thank you.
+                </label>
+             </fieldset>
+
+             <!-- Question 21: Salary Expectation -->
+              <div>
+                <label for="salary">
+                    21. What is your expected salaary range (Optional)
+                </label>
+                <select id="salary" name="salary">
+                    <option value="" >--Select salary range--</option>
+                    <option value="under-30k" >Under $30,000</option>
+                    <option value="30k-50k" >$30,000 - $50,000</option>
+                    <option value="50k-70k" >$50,000 - $70,000</option>
+                    <option value="70k-100k" >$70,000 - $100,000</option>
+                    <option value="100k-150k" >$100,000 - $150,000</option>
+                    <option value="150k-plus" >$150,000+</option>
+                </select>
+              </div>
+
+              <!-- Question 22: Availability Date -->
+                <div>
+                    <label for="availability">
+                        22. When are you available to start a new role? (Optional)
+                    </label>
+                    <input type="date" id="availability" name="availability"
+                    min="2026-01-01" >
+                </div>
+
+                <!-- Question 23: Portfolio Website -->
+                 <div>
+                    <label for="potfolio">
+                        23. Portfolio Website or 
+                        GitHud Profile (Optional):
+                    </label>
+                    <input type="url" id="Portfolio"
+                    name="Portfolio" placeholder="https://github.com/yourusername">
+                 </div>
+                 
+                 <!-- Question 24: Contact Preference -->
+                  <div>
+                    <label for="phone">
+                        24. Phone Number (Optional):
+                    </label>
+                    <input type="tel" id="phone" name="phone"
+                    placeholder="+1-234-567-8901" pattern="[+0-9\s\-()]+">
+                    <small>Format: +1-234-567-8901</small>
+                  </div>
+
+                  <!-- Question 25: Feedback color Preference -->
+                   <div>
+                    <label for="color-preference">
+                        25. Pick your favorite color
+                         (just for fun!🎨 ):
+                    </label>
+                    <input type="color" id="color-preference"
+                    name="color-preference" value="#ff0000">
+                   </div>
+        </section>
+
+        <!-- Terms and Conditions -->
+         <section>
+            <h2>📜 Terms & Conditions</h2>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="terms"
+                    value="accepted"
+                    required
+                    aria-required="true">
+                    I agree to the <a href="#" target="_blank">Terms and Conditions</a>
+                    and <a href="#" target="_blank">Privacy Policy</a>
+                    <abbr title="required" aria-label="required">*</abbr>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" 
+                    name="updates" value="yes">
+                    I want to receive updates about
+                    new courses and job opportunities.
+                </label>
+            </div>
+         </section>
+
+         <!-- Form Submission -->
+          <section>
+            <h2>🚀 Submit Your Survey</h2>
+
+            <div>
+                <button type="submit">Submit Survey</button>
+                <button type="reset">Clear All Answers</button>
+            </div>
+
+            <p><small>
+                <mark>Required fields are marked with *</mark><br>
+                Your responses are confidential and will be
+                used for research purposes only.
+            </small></p>
+        </section>
+
+        </form>
+    </main>
+
+    <footer>
+        <P>&copy; 2025 Developer Community Survey.
+            All rights reserved.
+        </P>
+        <p>
+            Questions? Email us at: <a href="mailto:support@developercommunity.com">support@developercommunity.com</a>
+        </p>
+    </footer>
+
+    <script>
+        // Character counter for textareas
+        document.getElementById('goals').addEventListener('input', function() {
+            document.getElementById('goals-count').textContent = this.value.length;
+        });
+        
+        document.getElementById('challenge').addEventListener('input', function() {
+            document.getElementById('challenge-count').textContent = this.value.length;
+        });
+    </script>
+</body>
+</html>
