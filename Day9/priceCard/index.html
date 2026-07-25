@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Box Model & Positioning Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+     <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>💎 PricingPro</h1>
+            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+     </header>
+
+     <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+            <h2 class="hero-title">Choose Your Perfect Plan</h2>
+            <p class="hero-subtitle">Simple, transparent pricing that grows with you. Try any plan free for 30 days.</p>
+        </div>
+      </section>
+
+      <!-- Pricing Cards Section -->
+       <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="pricing-cards">
+
+                <!-- Basic Plan -->
+                 <div class="pricing-card">
+                    <div class="card-header">
+                        <h3 class="plan-name">Basic Plan</h3>
+                        <p class="plan-description">Perfect for individuals</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="currency">$</span>
+                        <span class="amount">9.99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="features-list">
+                        <li class="feature-item"><span class="check-icon">✓</span>Up to 5 projects</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>5 GB Storage</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Email support</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Basic analytics</li>
+                        <li class="feature-item disabled"><span class="cross-icon">✗</span>Team collaboration</li>
+                        <li class="feature-item disabled"><span class="cross-icon">✗</span>Advance security</li>
+                        <li class="feature-item disabled"><span class="cross-icon">✗</span>Priority support</li>
+                    </ul>
+                    <button class="btn btn-outline">Choose Basic</button>
+                 </div>
+
+                <!-- Pro Plan (Popular) -->
+                 <div class="pricing-card popular">
+                    <!-- Popular Badge (Absolute Positioning) -->
+                    <div class="popular-badge">
+                        ⭐ Most Popular
+                    </div>
+
+                    <div class="card-header">
+                        <h3 class="plan-name">Pro Plan</h3>
+                        <p class="plan-description">
+                            For growing teams
+                        </p>
+                    </div>
+                    <div class="card-price">
+                        <span class="currency">$</span>
+                        <span class="amount">29.99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="features-list">
+                        <li class="feature-item"><span class="check-icon">✓</span>Unlimited projects</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>100 GB Storage</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Priority email support</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Advanced analytics</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Team collaboration (10 members)</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Advanced security</li>
+                        <li class="feature-item disabled"><span class="cross-icon">✗</span>24/7 phone support</li>
+                    </ul>
+                    <button class="btn btn-primary">Choose Pro</button>
+                 </div>
+
+                <!-- Enterprise Plan -->
+                 <div class="pricing-card">
+                    <div class="card-header">
+                        <h3 class="plan-name">Enterprise Plan</h3>
+                        <p class="plan-description">For large organizations</p>
+                    </div>
+                    <div class="card-price">
+                        <span class="currency">$</span>
+                        <span class="amount">99.99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="features-list">
+                        <li class="feature-item"><span class="check-icon">✓</span>Unlimited everything</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>1 TB Storage</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>24/7 phone + email support</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Custom analytics & reporting</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Team collaboration (unlimited members)</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Enterprise-grade security</li>
+                        <li class="feature-item"><span class="check-icon">✓</span>Dedicated account manager</li>
+                    </ul>
+                    <button class="btn btn-outline">Choose Enterprise</button>
+                 </div>
+
+            </div>
+        </div>
+       </section>
+
+       <!-- Features Section (Extra scrollable content) -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <h2 class="section-title">All Plans Include</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Fast Performance</h3>
+                        <p>Lightning-fast load times guaranteed</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Ready</h3>
+                        <p>Works perfectly on all devices</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Beautiful Design</h3>
+                        <p>Clean and modern interface</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Real-time Updates</h3>
+                        <p>See changes instantly</p>
+                    </div>
+                        <div class="feature-box">
+                        <div class="feature-icon">💬</div>
+                        <h3>Great Support</h3>
+                        <p>We're here to help 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+         <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Can I change Plans later?</h3>
+                        <p>Yes, you can upgrade or downgrade your plan at any time.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is there a free trial?</h3>
+                        <p>Absolutely! All plans come with a 30-day free trial.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What payment methods do you accept?</h3>
+                        <p>We accept all major credit cards, PayPal, and bank transfers.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I cancel anytime?</h3>
+                        <p>Yes, you can cancel your subscription at any time. No questions asked.</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!-- Footer Section -->
+          <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 PricingPro. All rights reserved.</p>
+                <p>Made with ❤️ for Day 9 Project</p> 
+            </div>
+          </footer>
+
+          <!-- Fixed Buy Now Button -->
+    <div class="fixed-cta">
+        <button class="btn btn-fixed" onclick="alert('Redirecting to checkout...')">
+            🛒 Buy Now - Special Offer!
+        </button>
+    </div>
+</body>
+</html>

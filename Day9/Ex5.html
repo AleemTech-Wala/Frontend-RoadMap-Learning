@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Positioning</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+        }
+
+        /* Example 1: Badge on image */
+        .image-container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .sale-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .discount {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #f39c12;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 20px;
+        }
+
+         /* Example 2: Close button */
+         .modal {
+            position: relative;
+            width: 500px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+         }
+
+         .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+         }
+         .close-btn:hover {
+            background-color: #c0392b;
+         }
+
+         /* Example 3: Centered overlay */
+        .overlay-container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect fill="%23ddd" width="400" height="300"/><text x="50%" y="50%" font-size="20" fill="%23999" text-anchor="middle" dy=".3em">Background Image</text></svg>');
+            border-radius: 10px;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-color: rgba(231, 76, 60, 0.9);
+            border-radius: 50%;
+            border: 4px solid white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background-color: rgba(231, 76, 60, 1);
+        }
+
+        .play-button::after {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 30px;
+        }
+
+        /* Example 4: Corner ribbons */
+        .card {
+            position: relative;
+            width: 300px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background-color: #2ecc71;
+            color: white;
+            padding: 8px 40px;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Position: Absolute Example</h1>
+
+        <h2>1. Badges on image</h2>
+        <div class="image-container">
+            <div class="discount">50% OFF</div>
+            <div class="sale-badge">Sale</div>
+            <div class="image-caption">
+                <h3>Product Name</h3>
+                <p>Amazing product description here</p>
+            </div>
+        </div>
+
+        <h2>2. Modal with close button</h2>
+        <div class="modal">
+            <button class="close-btn">×</button>
+            <h3>Modal Title</h3>
+            <p>This modal has a close button positioned at top-right corner using position: absolute.</p>
+            <p>Parent has position: relative to make it the reference point.</p>
+        </div>
+
+        <h2>3. Centered Play Button</h2>
+        <div class="overlay-container">
+            <div class="play-button"></div>
+        </div>
+
+        <h2>4. Corner Ribbon</h2>
+        <div class="card">
+            <div class="ribbon">FEATURED</div>
+            <h3>Card Title</h3>
+            <p>This card has a diagonal ribbon in the top-right corner created with absolute positioning and rotation.</p>
+        </div>
+    </div>
+</body>
+</html>

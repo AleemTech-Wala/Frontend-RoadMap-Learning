@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Positioning</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            padding: 40px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            color: white;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 5px;
+        }
+        .box-static {
+            position: static;
+            background-color: #95a5a6;
+        }
+        .box-relative {
+            position: relative;
+            top: 30px;
+            left: 30px;
+            background-color: #e74c3c;
+        }
+        .box-after {
+            background-color: #2ecc71;
+        }
+        .profile-card {
+            position: relative;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #bdc3c7;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            margin: 40px auto;
+        }
+        .badge {
+            position: relative;
+            top: -10px;
+            right: -10px;
+            float: right;
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Position: Relative Demo</h1>
+
+        <h2>1. Basic Example</h2>
+        <div class="box box-static">Static</div>
+        <div class="box box-relative">Relative
+        (moved)</div>
+        <div class="box box-after">After</div>
+
+        <p style="margin-top: 20px; color: #7f8c8d;" >
+             Notice: Middle box moved, but original space is still reserved (ghost space).
+        </p>
+
+        <h2>2.Practical : Badge </h2>
+        <div class="profile-card">
+            <span class="badge">New</span>
+            <h3>John Doe</h3>
+            <p>Web Developer</p>
+            <p>Email: john.doe@example.com</p>
+        </div>
+    </div>
+</body>
+</html>
