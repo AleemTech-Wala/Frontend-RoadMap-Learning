@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+        .example{
+            margin-bottom: 30px;
+        }
+        h2{
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        .container{
+            display: flex;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            width: 500px;
+        }
+        .box{
+            width: 120px;
+            height: 80px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 5px;
+            flex-shrink: 0;  /* Prevent shrinking for nowrap demo */
+        }
+        .box:nth-child(even) {
+            background-color: #e74c3c;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+        .wrap-reverse{
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+        <h1>Flex-Wrap Examples</h1>
+    <br>
+
+    <div class="example">
+        <h2>1. flex-wrap: nowrap (Default)</h2>
+        <div class="container nowrap">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            All items stay in one line (may overflow container)
+        </p>
+    </div>
+
+    <div class="example">
+        <h2>2. flex-wrap: wrap</h2>
+        <div class="container wrap">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Items wrap to next line when container is full
+        </p>
+    </div>
+
+    <div class="example">
+        <h2>3. flex-wrap: wrap-reverse</h2>
+        <div class="container wrap-reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Items wrap in reverse order (new lines appear on top)
+        </p>
+    </div>
+</body>
+</html>

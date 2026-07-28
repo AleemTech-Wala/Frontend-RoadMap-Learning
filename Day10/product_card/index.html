@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card - Flexbox Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+     <header class="header">
+        <div class="container">
+            <h1>🛍️ Product Store</h1>
+            <p>Premium Products with Flexbox Layout</p>
+        </div>
+     </header>
+
+     <!-- Product Grid -->
+      <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">
+                Featured Products
+            </h2>
+
+            <!-- Product Grid Container -->
+             <div class="products-grid">
+
+                <!-- Product Card1 -->
+                 <div class="product-card">
+                    <div class="product-image">
+                        <img src="wireless_headphones.jpg"  alt="Product 1">
+                        <span class="badge new">New</span>
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class="product-title">
+                            Wireless Headphones
+                        </h3>
+                        <p class="product-description">
+                            Premium noise-cencelling Headphones
+                            with 30hrs battry life.
+                        </p>
+
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span>(4.8)</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            <span class="price-old">$149</span>
+                             <span class="price-new">$99.99</span>
+                        </div>
+                        <button class="btn-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                 </div>
+
+                 <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="smart_watch.jpg" alt="Product 2">
+                        <span class="badge sale">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Smart Watch Pro</h3>
+                        <p class="product-description">Advanced fitness tracking with heart rate monitor and GPS.</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐☆ <span>(4.5)</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            <span class="price-old">$299.99</span>
+                            <span class="price-new">$199.99</span>
+                        </div>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="portable_speaker.jpg" alt="Product 3">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Portable Speaker</h3>
+                        <p class="product-description">Waterproof Bluetooth speaker with 360° sound and deep bass.</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            <span class="price-new">$79.99</span>
+                        </div>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="laptop_stand.jpg" alt="Product 4">
+                        <span class="badge hot">Hot</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Laptop Stand</h3>
+                        <p class="product-description">Ergonomic aluminum stand with adjustable height for all laptops.</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐☆ <span>(4.6)</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            <span class="price-new">$49.99</span>
+                        </div>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="wireless_mouse.jpg" alt="Product 5">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Wireless Mouse</h3>
+                        <p class="product-description">Precision optical mouse with ergonomic design and long battery.</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            <span class="price-old">$39.99</span>
+                            <span class="price-new">$29.99</span>
+                        </div>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="usb_hub.jpg" alt="Product 6">
+                        <span class="badge new">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">USB-C Hub</h3>
+                        <p class="product-description">7-in-1 adapter with HDMI, USB 3.0, SD card reader, and more.</p>
+                        <div class="product-rating">
+                            ⭐⭐⭐⭐☆ <span>(4.7)</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            <span class="price-new">$59.99</span>
+                        </div>
+                        <button class="btn-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+             </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Product Store. Built with Flexbox for Day 10 Project.</p>
+        </div>
+    </footer>
+</body>
+</html>

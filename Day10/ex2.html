@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Direction</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .example{
+            margin-bottom: 40px;
+        }
+
+        h2{
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .container{
+            display: flex;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            min-height: 150px;
+        }
+
+        .row{
+            flex-direction: row;
+        }
+
+        .row-reverse{
+            flex-direction: row-reverse;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .column-reverse{
+            flex-direction: column-reverse;
+        }
+
+        .box{
+            width: 80px;
+            height: 80px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .box:nth-child(2){
+            background-color: red;
+        }
+        .box:nth-child(3){
+            background-color: green;
+        }
+        .box:nth-child(4){
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Direction Examples</h1>
+    <br>
+
+    <div class="example">
+        <h2>1. Flex-direction: row (Default - left to right)</h2>
+        <div class="container row">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>2. Flex-direction: row-reverse (Right to left)</h2>
+        <div class="container row-reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>3. Flex-direction: column (Top to bottom)</h2>
+        <div class="container column">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>4. Flex-direction: column-reverse (Bottom to top)</h2>
+        <div class="container column-reverse">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+        </div>
+    </div>
+</body>
+</html>

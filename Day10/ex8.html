@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align-Self & Order</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+        h2{
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        .example{
+            margin-bottom: 40px;
+        }
+        .container{
+            display: flex;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            height: 200px;
+        }
+        .box{
+            width: 100px;
+            height: 80px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin: 5px;
+            border-radius: 8px;
+            padding: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .box:nth-child(2){
+            background-color: red;
+        }
+
+        .box:nth-child(3){
+            background-color: #2ecc71;
+        }
+
+        .box:nth-child(4){
+            background-color: orange;
+        }
+
+        .example-1 .container{
+            align-items: center;
+        }
+        .example-1 .box:nth-child(1){
+            align-self: flex-start;
+        }
+
+        .example-1 .box:nth-child(2){
+            align-self: center;
+        }
+
+        .example-1 .box:nth-child(3){
+            align-self: flex-end;
+        }
+
+        .example-1 .box:nth-child(4){
+            align-self: stretch;
+            height: auto;
+        }
+
+        .example-2 .box:nth-child(1) {
+            order: 3;
+        }
+
+        .example-2 .box:nth-child(2) {
+            order: 1;
+        }
+
+        .example-2 .box:nth-child(3) {
+            order: 4;
+        }
+
+        .example-2 .box:nth-child(4) {
+            order: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aligh-Self & Order Examples</h1>
+    <br>
+
+    <div class="example example-1">
+        <h2>1. align-self (Individual Alignment)</h2>
+        <div class="container">
+            <div class="box">A<br>flex-start</div>
+            <div class="box">B<br>center</div>
+            <div class="box">C<br>flex-end</div>
+            <div class="box">D<br>stretch</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Each item has different vertical alignment
+        </p>
+    </div>
+
+     <div class="example example-2">
+        <h2>2. order (Change Display Order)</h2>
+        <div class="container">
+            <div class="box">A<br>order: 3<br>(3rd)</div>
+            <div class="box">B<br>order: 1<br>(1st)</div>
+            <div class="box">C<br>order: 4<br>(4th)</div>
+            <div class="box">D<br>order: 2<br>(2nd)</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Display order: B → D → A → C (not HTML order!)
+        </p>
+    </div>
+</body>
+</html>

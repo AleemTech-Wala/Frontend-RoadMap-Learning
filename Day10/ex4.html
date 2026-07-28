@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Items</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+        .example{
+            margin-bottom: 30px;
+        }
+        h2{
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        .container{
+            display: flex;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            height: 200px;
+        }
+        .box{
+            width: 80px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+        .box:nth-child(1) {
+            height: 60px;
+        }
+
+        .box:nth-child(2) {
+            height: 100px;
+            background-color: #e74c3c;
+        }
+
+        .box:nth-child(3) {
+            height: 80px;
+            background-color: #2ecc71;
+        }
+
+        .flex-start{
+            align-items: flex-start;
+        }
+        .flex-end{
+            align-items: flex-end;
+        }
+        .center{
+            align-items: center;
+        }
+        .stretch{
+            align-items: stretch;
+        }
+        .stretch .box{
+            height: auto;
+        }
+        .baseline{
+            align-items: baseline;
+        }
+    </style>
+</head>
+<body>
+        <h1>Align-Items Examples (Cross Axis)</h1>
+    <br>
+
+    <div class="example">
+        <h2>1. align-items: flex-start</h2>
+        <div class="container flex-start">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>2. align-items: flex-end</h2>
+        <div class="container flex-end">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>3. align-items: center</h2>
+        <div class="container center">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>4. align-items: stretch (Default)</h2>
+        <div class="container stretch">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            All items stretch to full container height
+        </p>
+    </div>
+
+    <div class="example">
+        <h2>5. align-items: baseline</h2>
+        <div class="container baseline">
+            <div class="box">1</div>
+            <div class="box" style="font-size: 30px;">2</div>
+            <div class="box" style="font-size: 14px;">3</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Items aligned by text baseline
+        </p>
+    </div>
+</body>
+</html>

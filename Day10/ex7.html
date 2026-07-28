@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shorthand</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+        .example{
+            margin-bottom: 40px;
+        }
+        .container{
+            display: flex;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+        }
+
+        .box{
+            height: 80px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 5px;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .box:nth-child(2) {
+            background-color: red;
+        }
+        .box:nth-child(3){
+            background-color: #2ecc71;
+        }
+
+        .example-1 .box{
+            flex: 1;
+        }
+
+        .example-2 .box:nth-child(1){
+            flex: 1;
+        }
+        .example-2 .box:nth-child(2){
+            flex: 2;
+        }
+
+        .example-2 .box:nth-child(3){
+            flex: 1;
+        }
+
+        .example-3 .box:nth-child(1){
+            flex: 0 0 150px;
+        }
+        .example-3 .box:nth-child(2){
+            flex: 1;
+        }
+        .example-3 .box:nth-child(3){
+            flex: 0 0 100px;
+        }
+        .example-4 .sidebar{
+            flex: 0 0 200px;
+            background-color: #34495e;
+        }
+        .example-4 .main{
+            flex: 1;
+        }
+        .example-4 .aside{
+            flex: 0 0 150px;
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Shorthand Examples</h1>
+    <br>
+
+    <div class="example example-1">
+        <h2>1. flex: 1 (All Equal)</h2>
+        <div class="container">
+            <div class="box">A<br>flex: 1</div>
+            <div class="box">B<br>flex: 1</div>
+            <div class="box">C<br>flex: 1</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            All items share space equally
+        </p>
+    </div>
+
+    <div class="example example-2">
+        <h2>2. Different Flex Values (1, 2, 1)</h2>
+        <div class="container">
+            <div class="box">A<br>flex: 1</div>
+            <div class="box">B<br>flex: 2</div>
+            <div class="box">C<br>flex: 1</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Middle item gets 2x more space
+        </p>
+    </div>
+
+    <div class="example example-3">
+        <h2>3. Mixed: Fixed + Flexible</h2>
+        <div class="container">
+            <div class="box">A<br>flex: 0 0 150px<br>(Fixed)</div>
+            <div class="box">B<br>flex: 1<br>(Flexible)</div>
+            <div class="box">C<br>flex: 0 0 100px<br>(Fixed)</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Sides fixed, middle takes remaining space
+        </p>
+    </div>
+
+    <div class="example example-4">
+        <h2>4. Practical: Sidebar Layout</h2>
+        <div class="container">
+            <div class="box sidebar">Sidebar<br>200px<br>(Fixed)</div>
+            <div class="box main">Main Content<br>flex: 1<br>(Flexible)</div>
+            <div class="box aside">Aside<br>150px<br>(Fixed)</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Classic 3-column layout
+        </p>
+    </div>
+</body>
+</html>

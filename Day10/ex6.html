@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Grow</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+        .example{
+            margin-bottom: 40px;
+        }
+        h2{
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        .container{
+            display: flex;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+        }
+        .box{
+            height: 80px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 5px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .box:nth-child(2) {
+            background-color: #e74c3c;
+        }
+
+        .box:nth-child(3) {
+            background-color: #2ecc71;
+        }
+
+        .example-1 .box{
+            flex-grow: 0;
+            width: 100px;
+        }
+        .example-2 .box{
+            flex-grow: 1;
+        }
+        .example-3 .box:nth-child(1){
+            flex-grow: 1;
+        }
+        .example-3 .box:nth-child(2){
+            flex-grow: 2;
+        }
+        .example-3 .box:nth-child(3){
+            flex-grow: 1;
+        }
+        .example-4 .box:nth-child(1){
+            flex-grow: 0;
+            width: 100px;
+        }
+        .example-4 .box:nth-child(2){
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Grow Examples</h1>
+    <br>
+
+    <div class="example example-1">
+        <h2>1. flex-grow: 0 (Default - No Growth)</h2>
+        <div class="container">
+            <div class="box">A <br>Grow: 0</div>
+            <div class="box">B <br>Grow: 0</div>
+            <div class="box">C <br>Grow: 0</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Items don't grow, extra space remains unused
+        </p>
+    </div>
+
+    <div class="example example-2">
+        <h2>2. flex-grow: 1 (All Equal)</h2>
+        <div class="container">
+            <div class="box">A<br>grow: 1</div>
+            <div class="box">B<br>grow: 1</div>
+            <div class="box">C<br>grow: 1</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            All items grow equally, filling the container
+        </p>
+    </div>
+
+    <div class="example example-3">
+        <h2>3. Different Ratios (1, 2, 1)</h2>
+        <div class="container">
+            <div class="box">A<br>grow: 1</div>
+            <div class="box">B<br>grow: 2</div>
+            <div class="box">C<br>grow: 1</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Middle item gets 2x more space than others
+        </p>
+    </div>
+
+    <div class="example example-4">
+        <h2>4. Only One Grows</h2>
+        <div class="container">
+            <div class="box">A<br>grow: 0</div>
+            <div class="box">B<br>grow: 1</div>
+            <div class="box">C<br>grow: 0</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Only middle item takes all extra space
+        </p>
+    </div>
+</body>
+</html>
