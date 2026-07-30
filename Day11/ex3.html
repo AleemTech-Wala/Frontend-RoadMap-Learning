@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Rows & Gap</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+        .example{
+            margin-bottom: 40px;
+        }
+        h2{
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        .grid{
+            display: grid;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+        }
+        .box{
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box:nth-child(even) {
+            background-color: #e74c3c;
+        }
+
+        .box:nth-child(3n) {
+            background-color: #2ecc71;
+        }
+
+        .grid-rows{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 150px 100px;
+            gap: 10px;
+        }
+
+        .grid-auto-rows{
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto auto;
+            gap: 10px;
+        }
+
+        .grid-gaps{
+            grid-template-columns: repeat(3,1fr);
+            row-gap: 30px;
+            column-gap: 10px;
+        }
+
+        .grid-large-gap{
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Grid Rows & Gap Examples</h1>
+    <br>
+
+    <div class="example">
+        <h2>1. Fixed Row Heights (100px 150px 100px)</h2>
+        <div class="grid grid-rows">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>2. Auto Rows (Content Height)</h2>
+        <div class="grid grid-auto-rows">
+            <div class="box">Short</div>
+            <div class="box">Medium<br>Content<br>Here</div>
+            <div class="box">Text</div>
+            <div class="box">More<br>Text</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>3. Different Gaps (row: 30px, column: 10px)</h2>
+        <div class="grid grid-gaps">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <p style="color: #7f8c8d; margin-top: 5px; font-size: 14px;">
+            Vertical gap (30px) larger than horizontal (10px)
+        </p>
+    </div>
+
+    <div class="example">
+        <h2>4. Large Gap (30px)</h2>
+        <div class="grid grid-large-gap">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </div>
+</body>
+</html>

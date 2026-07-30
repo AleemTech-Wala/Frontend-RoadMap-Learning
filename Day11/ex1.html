@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Basics</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .example{
+            margin-bottom: 50px;
+        }
+
+        h2{
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        p{
+            margin-top: 10px;
+            color: #7f8c8d;
+        }
+
+        .container-normal{
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #95a5a6;
+        }
+
+        .container-grid-basic{
+            display: grid;
+            background-color: #e8f5e9;
+            padding: 20px;
+            border: 2px solid #4caf50;
+        }
+
+        .container-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            background-color: #e3f2fd;
+            padding: 20px;
+            border: 2px solid #2196f3;
+        }
+        .box{
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .box:nth-child(even){
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Grid Introduction</h1>
+    <br>
+
+    <div class="example">
+        <h2>1. Without Grid (Normal Block)</h2>
+        <div class="container-normal">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+        <p>items stack vertically (normal block layout)</p>
+    </div>
+
+    <div class="example">
+        <h2>2. With Grid (No Columns)</h2>
+        <div class="container-grid-basic">
+            <div class="box">Box1</div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+        </div>
+        <p>Grid activated but no columns defined = single column</p>
+    </div>
+
+     <div class="example">
+        <h2>3. Grid with 3 Columns</h2>
+        <div class="container-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <p>3 columns defined, items automatically placed!</p>
+</body>
+</html>

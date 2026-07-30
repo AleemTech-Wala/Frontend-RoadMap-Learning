@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid item Placement Examples</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px;
+            background-color: #f5f5f5;
+        }
+        h1{
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        .example{
+            margin-bottom: 50px;
+        }
+        h2{
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            gap: 10px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+        }
+         .box{
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         /* Column Span */
+         .grid1 .item1{
+            grid-column: 1 / 3;
+            background-color: #e74c3c;
+         }
+
+         .grid1 .item2{
+            grid-column: span 2;
+            background-color: #27ae60;
+         }
+
+            /* Row Span */
+
+        .grid2 .item1{
+            grid-row: 1 / 3;
+            background-color: #e74c3c;
+        }
+
+        .grid2 .item2{
+            grid-row: span 2;
+            background-color: #27ae60;
+        }
+
+        /* Example 3: Both column and row spanning */
+
+        .grid3 .item1{
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+            background-color: #e74c3c;
+            font-size: 20px;
+        }
+
+        .grid3 .item2{
+            grid-column: 3 / 5;
+            grid-row: 1 / 2;
+            background-color: #27ae60;
+        }
+
+        .grid3 .item3{
+            grid-column: 3 / 4;
+            grid-row: 2 / 4;
+            background-color: #f39c12;
+        }
+
+        .grid3 .item4{
+            grid-column: 4 / 5;
+            grid-row: 2 / 4;
+            background-color: #8e44ad;
+        }
+
+        /* Example 4: Full width item */
+
+        .grid4 .item1{
+            grid-column: 1 / -1;
+            background-color: #e74c3c;
+        }
+
+        .grid4 .item2{
+            grid-column: 1 / 3;
+            background-color: #27ae60;
+        }
+
+        .grid4 .item3{
+            grid-column: 3 / -1;
+            background-color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid item Placement Examples</h1>
+
+    <div class="example">
+        <h2>1. Column Spaning</h2>
+        <div class="grid grid1">
+            <div class="box item1">Item 1
+                <br>grid-column: 1/3
+            </div>
+            <div class="box item2">Item 2
+                <br>Span 2
+            </div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+        <p style="margin-top: 10px; color: #7f8c8d;">
+             Red item spans columns 1-3, Green item spans 2 columns
+        </p>
+    </div>
+
+    <div class="example">
+        <h2>2. Row Spanning</h2>
+        <div class="grid grid2">
+            <div class="box item1">Item 1<br>grid-row:<br>1/3</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box item2">Item 2<br>span 2<br>rows</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>3. Complex Layout (Rows + Columns)</h2>
+        <div class="grid grid3">
+            <div class="box item1">
+                LARGE BOX<br>
+                2×2 Grid
+            </div>
+            <div class="box item2">Item 2<br>2 cols</div>
+            <div class="box item3">Item 3<br>2 rows</div>
+            <div class="box item4">Item 4<br>2 rows</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>4. Full Width Item (1 / -1)</h2>
+        <div class="grid grid4">
+            <div class="box item1">HEADER (Full Width)<br>grid-column: 1 / -1</div>
+            <div class="box item2">Left Section</div>
+            <div class="box item3">Right Section</div>
+            <div class="box">Footer 1</div>
+            <div class="box">Footer 2</div>
+            <div class="box">Footer 3</div>
+            <div class="box">Footer 4</div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
